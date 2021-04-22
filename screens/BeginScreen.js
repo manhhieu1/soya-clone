@@ -11,15 +11,15 @@ export default function BeginScreen({navigation}) {
                 <Image source={{uri:'https://soyagarden.com/content/uploads/2019/09/logo-soya-2.png'}} style={{marginBottom:60,marginTop:80,height:90,width:233}}/>
             </View>
             <View>
-                <TouchableOpacity style={{},styles.btn}>
-                    <Image source={require('./fb.png')} style={{height:30,width:30}}/>
+                <TouchableOpacity style={{},styles.btn} onPress={() => navigation.navigate('Details')}>
+                    <Image source={require('./images/fb.png')} style={{height:30,width:30}}/>
                     <Text style={{color:'white'}}>Đăng nhập với facebook</Text>
                 </TouchableOpacity>
             </View>
             <View style={{alignItems:'center', marginTop:25}}>
             <Text >Hoặc đăng nhập bằng</Text>
             </View>
-                <TextInput style={{borderBottomWidth:1, marginTop:15,borderColor:'silver',marginLeft:15,marginRight:15}} textAlign={'center'} placeholder="Số điện thoại"></TextInput>
+                <TextInput keyboardType="numeric" style={{borderBottomWidth:1, marginTop:15,borderColor:'silver',marginLeft:15,marginRight:15}} textAlign={'center'} placeholder="Số điện thoại"></TextInput>
             <View>
                 <TouchableOpacity style={{backgroundColor:'orange'},styles.btn1}>
                     <Text style={{}}>ĐĂNG NHẬP</Text>
@@ -28,7 +28,7 @@ export default function BeginScreen({navigation}) {
             <View style={{height:50,alignItems:'center',}}>
                 <Text style={{textAlign:'center',width:300}}>Bằng việc đăng nhập, bạn đã đồng ý với <Text style={{textDecorationLine:'underline',color:'#67ad45'}} onPress={()=> Linking.openURL('https://soyagarden.com/terms')}>Điều khoản sử dụng</Text> của Soya Garden</Text>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                 <View style={styles.btnContainer}>
                     <Text>TRẢI NGHIỆM NGAY</Text>
                 </View>

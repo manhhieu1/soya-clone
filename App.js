@@ -15,8 +15,7 @@ import BeginScreen from './screens/BeginScreen'
 import detailScreen from './screens/detailScreen'
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator(
-);
+const Tab = createBottomTabNavigator();
 const HomeStack = () => {
   return(
     <Stack.Navigator screenOptions={{headerShown: false}}>
@@ -26,6 +25,17 @@ const HomeStack = () => {
     </Stack.Navigator>
   )
 }
+
+// const Other = () => {
+//   return(
+//     <Stack.Navigator screenOptions={{headerShown: false}}>
+//       <Stack.Screen name="Other" component={Other} />
+//       <Stack.Screen name="Begin" component={BeginScreen}/>
+//       <Stack.Screen name="Home" component={home} />
+
+//     </Stack.Navigator>
+//   )
+// }
 
 export default function App() {
   return (
@@ -55,7 +65,7 @@ export default function App() {
         component={store}
         options={{
           tabBarIcon : ({color}) => (
-            <Ionicons name="home-outline" color={color} size ={28}/>
+            <MaterialCommunityIcons name="storefront-outline" color={color} size ={28}/>
           ),
         }}
         />
@@ -65,8 +75,8 @@ export default function App() {
         style={{height:100,width:100}}
         options={{
           tabBarIcon : ({color}) => (
-            <View style={{height:60,width:60,justifyContent:'center',alginItems:'center',backgroundColor:'white',borderRadius:30,top:-20,elevation:5}}>
-              <Image style={{height:60,width:60,borderRadius:30}} source={require('./screens/logo.jpg')} />
+            <View style={{height:60,width:60,justifyContent:'center',alginItems:'center',backgroundColor:'#FECE02',borderRadius:30,top:-20,elevation:5}}>
+              <Image style={{height:45,width:45, marginLeft: 5}} source={require('./screens/images/logo.png')} />
             </View>
           ),
         }}
@@ -76,7 +86,7 @@ export default function App() {
         component={noti}
         options={{
           tabBarIcon : ({color}) => (
-            <Ionicons name="home-outline" color={color} size ={28}/>
+            <Ionicons name="notifications-outline" color={color} size ={28}/>
           ),
         }}
         />
@@ -85,7 +95,7 @@ export default function App() {
         component={other}
         options={{
           tabBarIcon : ({color}) => (
-            <Ionicons name="home-outline" color={color} size ={28}/>
+            <Ionicons name="ellipsis-horizontal-sharp" color={color} size ={28}/>
           ),
         }}
         />
