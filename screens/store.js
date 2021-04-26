@@ -17,7 +17,7 @@ export default function store() {
             <View>
 
                 <View style={{ marginLeft: 10, width: '92%', backgroundColor: 'white', borderRadius: 10 }}>
-                    <Image source={{ uri: item.photo }} style={{ height: 150, width: 326, borderTopLeftRadius: 10, borderTopRightRadius: 10 }} />
+                    <Image source={{ uri: item.photo }} style={{ height: 150, width: 400, borderTopLeftRadius: 10, borderTopRightRadius: 10 }} />
                     <Text style={{ marginLeft: 15, fontWeight: 'bold', marginRight: 15, marginTop: 10 }}> {item.name}</Text>
                     <View style={{flexDirection:'row',marginRight:20, width:"90%"}}>
                         <View>

@@ -32,7 +32,7 @@ const DATA2 = Array(10).fill('').map((e, i) => ({
 
 export default function home({ navigation }) {
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={{ marginLeft: 15 }} onPress={() => navigation.navigate('Details')}>
+    <TouchableOpacity style={{ marginLeft: 15 ,marginRight: 30}} onPress={() => navigation.navigate('Details')}>
       <View style={{ width: 200 }}>
         <View style={{}}>
           <Image
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
 
   imgStyle: {
     height: 130,
-    width: width / 1.8,
+    width: 230,
     borderRadius: 7
   },
 

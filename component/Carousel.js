@@ -54,7 +54,7 @@ const Carousel = ({ data }) => {
                         return <CarouselItem item={item} />
                     }}
                     onScroll={Animated.event(
-                        [{ nativeEvent: { contentOffset: { x: scrollX } } }]
+                        [{ nativeEvent: { contentOffset: { x: scrollX } } }],{useNativeDriver:false},
                     )}
                 />
 
@@ -68,7 +68,7 @@ const Carousel = ({ data }) => {
                         return (
                             <Animated.View
                                 key={i}
-                                style={{ opacity, height: 10, width: 10, backgroundColor: 'orange', margin: 8, borderRadius: 5 }}
+                                style={{ opacity, height: 5, width: 5, backgroundColor: 'black', margin: 8, borderRadius: 5 }}
                             />
                         )
                     })}
